@@ -138,7 +138,7 @@ Router.post("/login", async (req, res) => {
          userLogin.tokens.push({token:refreshToken});
          userLogin.save();
           
-        res.cookie("jwtoken",refreshToken , {domain:'localhost:3000' sameSite:'none',secure:true, maxAge:1000*24*60*60 });
+        res.cookie("jwtoken",refreshToken , {domain:'localhost:3000', sameSite:'none',secure:true, maxAge:1000*24*60*60 });
         return res.status(200).json({
           status: "success",
           message: `${userLogin.name} user successfull`,
