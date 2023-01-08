@@ -172,7 +172,7 @@ Router.get("/logout",async (req, res) => {
       user.tokens=a
       user.save();
 
-res.clearCookie("jwtoken", { path: "/" ,HttpOnly: true,sameSite:'none',secure:true,});
+res.clearCookie("jwtoken", { path: "https://brown-dhole-tie.cyclic.app/" ,HttpOnly: true,sameSite:'none',secure:true,});
 
     // if we want logout from all device then we need to delete all token so we use unset to delete token field
 
@@ -198,7 +198,7 @@ Router.get("/alllogout", async (req, res) => {
       user.save();
 
       
-    res.clearCookie("jwtoken", { path: "/",HttpOnly: true, sameSite:'none',secure:true,});
+    res.clearCookie("jwtoken", { path: "https://brown-dhole-tie.cyclic.app/",HttpOnly: true, sameSite:'none',secure:true,});
 
     // if we want logout from all device then we need to delete all token so we use unset to delete token field
     return res.status(200).json({
