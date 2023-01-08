@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 const express = require("express");
+var app = express()
 const jwt = require("jsonwebtoken");
+var bodyParser = require('body-parser')
 const Router = express.Router();
 require("../db/connection");
 const registration = require("../model/userSchema");
@@ -14,6 +16,11 @@ const authentication = require("../middleware/authentication");
 const cookieParser = require("cookie-parser");
 const sendemail = require("../sendmail");
 const multer = require("multer");
+
+app.use(bodyParser.urlencoded({ extended: false }))
+
+
+app.use(bodyParser.json());
 
 
 Router.use(cookieParser());
