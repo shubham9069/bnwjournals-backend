@@ -13,7 +13,7 @@ const cors = require('cors');
 
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: ['http://localhost:3000','https://journals-3ae25.firebaseapp.com'],
     preflightContinue: true,
     credentials:true,            //access-control-allow-credentials:true
    optionSuccessStatus:200,
