@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 
 
 app.use(cors({
-    origin: ['http://localhost:3000','https://journals-3ae25.firebaseapp.com'],
+    origin: ['http://localhost:3000','https://journals-3ae25.firebaseapp.com','https://admin-9868.web.app','https://shubham.org.in'],
     preflightContinue: true,
     credentials:true,            //access-control-allow-credentials:true
    optionSuccessStatus:200,
