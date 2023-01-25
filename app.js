@@ -32,7 +32,7 @@ app.use(cookieParser());
 app.use(require('./router/auth'));
 app.use(require('./router/admin'));
 
-app.use("/images", express.static("./images"));
+app.use("/images", express.static("https://github.com/shubham9069/bnwjournals-backend/tree/master/images"));
 const PORT = process.env.PORT;
 
 
